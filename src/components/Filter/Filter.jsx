@@ -5,7 +5,7 @@ import { selectFilter } from './../../redux/filter/filterSelector';
 import { filterContactsAction } from 'redux/filter/filter-slice';
 
 const Filter = () => {
-  const filtervalue = useSelector(selectFilter);
+  const filterValue = useSelector(selectFilter);
   const dispatch = useDispatch();
   return (
     <div className={css.filter}>
@@ -15,7 +15,7 @@ const Filter = () => {
           className={css.filter__input}
           name="filter"
           type="text"
-          value={filtervalue}
+          value={filterValue}
           onChange={e => dispatch(filterContactsAction(e.target.value))}
           placeholder="Filter contacts"
         />
